@@ -20,62 +20,70 @@ import Layout from "../layouts/Layout.astro";
                 projects I like:
             </p>
 
-            <p>Scientific tooling:</p>
-            <ul>
-                <li>
-                    <a href="https://github.com/keejkrej/nd2-rs">nd2-rs</a>
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/czi-rs">czi-rs</a>
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/bioformats-zig"
-                        >bioformats-zig</a
-                    >
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/mdat">mdat</a>
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/mtools">mtools</a>
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/mplot-rs">mplot-rs</a>
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/mlab-rs">mlab-rs</a>
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/nd2-viewer"
-                        >nd2-viewer</a
-                    >
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/excalidraw-cli"
-                        >excalidraw-cli</a
-                    >
-                </li>
-            </ul>
+            <div class="project-group">
+                <p>Scientific tooling:</p>
+                <ul class="project-list">
+                    <li>
+                        <a href="https://github.com/keejkrej/nd2-rs">nd2-rs</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/czi-rs">czi-rs</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/bioformats-zig"
+                            >bioformats-zig</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/mdat">mdat</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/mtools">mtools</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/mplot-rs"
+                            >mplot-rs</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/mlab-rs">mlab-rs</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/nd2-viewer"
+                            >nd2-viewer</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/excalidraw-cli"
+                            >excalidraw-cli</a
+                        >
+                    </li>
+                </ul>
+            </div>
 
-            <p>Agents:</p>
-            <ul>
-                <li>
-                    <a href="https://github.com/keejkrej/reflect">reflect</a>
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/agent-plot"
-                        >agent-plot</a
-                    >
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/100PUA">100PUA</a>
-                </li>
-                <li>
-                    <a href="https://github.com/keejkrej/implAgent4Me"
-                        >implAgent4Me</a
-                    >
-                </li>
-            </ul>
+            <div class="project-group">
+                <p>Agents:</p>
+                <ul class="project-list">
+                    <li>
+                        <a href="https://github.com/keejkrej/reflect">reflect</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/agent-plot"
+                            >agent-plot</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/100PUA">100PUA</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/implAgent4Me"
+                            >implAgent4Me</a
+                        >
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section class="section">
@@ -124,16 +132,30 @@ import Layout from "../layouts/Layout.astro";
         margin-bottom: 0;
     }
 
-    ul {
-        padding-left: 1.25rem;
-        margin: 0 0 0.75rem;
+    .project-group {
+        margin-top: 1.25rem;
+        padding: 1rem;
+        background: var(--bg-muted);
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
     }
 
-    li {
-        margin: 0 0 0.25rem;
+    .project-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.35rem 1rem;
     }
 
-    .section p + ul {
-        margin-top: -0.25rem;
+    .project-list li {
+        display: block;
+        margin: 0;
+    }
+
+    .project-list a {
+        font-family: var(--font-mono);
+        font-size: 0.95rem;
     }
 </style>
