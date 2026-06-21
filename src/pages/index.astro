@@ -4,108 +4,233 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
     <main>
-        <h1>Tianyi Cao</h1>
-        <h2>Who I Am</h2>
-        <p>
-            From China, born in 2000. Currently PhD student in biophysics at LMU
-            Munich, researching targeted LNP gene delivery. Grew up in Shanghai
-            up to high school, then stayed in Munich for bachelor, master, and
-            PhD.
-        </p>
+        <section class="hero">
+            <p class="eyebrow">Hello, I’m</p>
+            <h1>Tianyi Cao</h1>
+            <p class="tagline">
+                PhD student in biophysics at LMU Munich. Vibe coder. I reinvent
+                the wheels I hate to use.
+            </p>
+        </section>
 
-        <h2>What I Do</h2>
-        <p>
-            Vibe coding. I reinvent the wheels I hate to use. Here are some
-            projects I like:
-        </p>
-        <p>Scientific tooling:</p>
-        <ul>
-            <li>
-                <a href="https://github.com/keejkrej/nd2-rs">nd2-rs</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/czi-rs">czi-rs</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/bioformats-zig"
-                    >bioformats-zig</a
-                >
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/mdat">mdat</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/mtools">mtools</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/mplot-rs">mplot-rs</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/mlab-rs">mlab-rs</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/nd2-viewer">nd2-viewer</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/excalidraw-cli"
-                    >excalidraw-cli</a
-                >
-            </li>
-        </ul>
-        <p>Agents:</p>
-        <ul>
-            <li>
-                <a href="https://github.com/keejkrej/reflect">reflect</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/agent-plot">agent-plot</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/100PUA">100PUA</a>
-            </li>
-            <li>
-                <a href="https://github.com/keejkrej/implAgent4Me"
-                    >implAgent4Me</a
-                >
-            </li>
-        </ul>
+        <section class="section">
+            <h2>Who I Am</h2>
+            <p>
+                From China, born in 2000. Currently researching targeted LNP
+                gene delivery. Grew up in Shanghai through high school, then
+                stayed in Munich for bachelor, master, and PhD.
+            </p>
+        </section>
 
-        <h2>What I believe</h2>
-        <p>
-            Humans are the interface of AI to the physical world. Aim to clone
-            myself digitally.
-        </p>
+        <section class="section">
+            <h2>What I Do</h2>
+            <p>
+                Mostly open-source tooling around microscopy, file formats, and
+                agent experiments. Here are some projects I like:
+            </p>
 
-        <h2>Who I Like</h2>
-        <p>No bullshit.</p>
-        <p>Criticize me but grounded.</p>
-        <p>Open source minded.</p>
+            <div class="project-group">
+                <span class="project-group__label">Scientific tooling</span>
+                <ul class="project-list">
+                    <li>
+                        <a href="https://github.com/keejkrej/nd2-rs">nd2-rs</a>
+                        <span class="project-desc"
+                            >— Nikon ND2 reader in Rust</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/czi-rs">czi-rs</a>
+                        <span class="project-desc">— Zeiss CZI decoder</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/bioformats-zig"
+                            >bioformats-zig</a
+                        >
+                        <span class="project-desc"
+                            >— Bioformats experiments in Zig</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/mdat">mdat</a>
+                        <span class="project-desc">— Metadata helpers</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/mtools">mtools</a>
+                        <span class="project-desc"
+                            >— Misc microscopy utilities</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/mplot-rs"
+                            >mplot-rs</a
+                        >
+                        <span class="project-desc">— Plotting for science</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/mlab-rs">mlab-rs</a
+                        >
+                        <span class="project-desc"
+                            >— Lab-notebook inspired toolkit</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/nd2-viewer"
+                            >nd2-viewer</a
+                        >
+                        <span class="project-desc"
+                            >— Browser-based ND2 viewer</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/excalidraw-cli"
+                            >excalidraw-cli</a
+                        >
+                        <span class="project-desc"
+                            >— CLI for Excalidraw diagrams</span
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project-group">
+                <span class="project-group__label">Agents</span>
+                <ul class="project-list">
+                    <li>
+                        <a href="https://github.com/keejkrej/reflect">reflect</a
+                        >
+                        <span class="project-desc"
+                            >— Self-reflection experiments</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/agent-plot"
+                            >agent-plot</a
+                        >
+                        <span class="project-desc">— Agent-driven plotting</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/100PUA">100PUA</a>
+                        <span class="project-desc"
+                            >— Prompt utility archive</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/keejkrej/implAgent4Me"
+                            >implAgent4Me</a
+                        >
+                        <span class="project-desc"
+                            >— Personal agent implementation</span
+                        >
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>What I Believe</h2>
+            <p>
+                Humans are the interface of AI to the physical world. Aim to
+                clone myself digitally.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Who I Like</h2>
+            <p>No bullshit.</p>
+            <p>Criticize me but grounded.</p>
+            <p>Open source minded.</p>
+        </section>
     </main>
 </Layout>
-<footer>
-    <a href="https://x.com/keejkrej">X</a>
-    <a href="https://github.com/keejkrej">GitHub</a>
-</footer>
 
 <style>
     main {
-        max-width: 640px;
-        margin: 0 auto;
-        padding: 2rem;
-        line-height: 1.6;
-    }
-    h1 {
-        margin-top: 0;
-    }
-    ul {
-        padding-left: 1.25rem;
-    }
-    footer {
-        max-width: 640px;
-        margin: 0 auto;
-        padding: 0 2rem 2rem;
         display: flex;
-        justify-content: center;
-        gap: 1rem;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .hero {
+        margin-bottom: 0.5rem;
+    }
+
+    .eyebrow {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+        margin: 0 0 0.5rem;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        margin: 0 0 1rem;
+    }
+
+    .tagline {
+        font-size: 1.15rem;
+        color: var(--text-muted);
+        max-width: 560px;
+        margin: 0;
+    }
+
+    .section h2 {
+        font-size: 1.25rem;
+        margin: 0 0 0.75rem;
+        color: var(--accent);
+    }
+
+    .section p {
+        margin: 0 0 0.75rem;
+    }
+
+    .section p:last-child {
+        margin-bottom: 0;
+    }
+
+    .project-group {
+        margin-top: 1.25rem;
+        padding: 1rem;
+        background: var(--bg-muted);
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+    }
+
+    .project-group__label {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-muted);
+        margin-bottom: 0.75rem;
+    }
+
+    .project-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    .project-list li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.35rem;
+    }
+
+    .project-list a {
+        font-family: var(--font-mono);
+        font-size: 0.95rem;
+    }
+
+    .project-desc {
+        color: var(--text-muted);
+        font-size: 0.95rem;
     }
 </style>
