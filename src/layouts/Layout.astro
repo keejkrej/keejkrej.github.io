@@ -11,25 +11,18 @@
             name="description"
             content="PhD student in biophysics, vibe coder, open-source tooling builder."
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
-            rel="stylesheet"
-        />
     </head>
     <body>
         <div class="page">
             <header class="site-header">
-                <a class="logo" href="/">Tianyi Cao</a>
+                <a class="logo" href="/">~/keejkrej</a>
                 <button
                     class="theme-toggle"
                     id="theme-toggle"
                     type="button"
-                    aria-label="Toggle theme"
+                    aria-label="Toggle dark mode"
                 >
-                    <span class="theme-toggle__sun" aria-hidden="true">☼</span>
-                    <span class="theme-toggle__moon" aria-hidden="true">☾</span>
+                    <span class="theme-toggle__icon" aria-hidden="true">◐</span>
                 </button>
             </header>
 
@@ -46,42 +39,50 @@
 
 <style is:global>
     :root {
-        --font-serif:
-            "Newsreader", ui-serif, Georgia, Cambria, "Times New Roman", Times,
-            serif;
+        --font-sans:
+            system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif;
         --font-mono:
-            "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-            "Liberation Mono", "Courier New", monospace;
+            "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+            monospace;
 
-        /* Dark by default */
-        --bg: #09090b;
-        --bg-soft: #18181b;
-        --text: #f4f4f5;
-        --text-muted: #a1a1aa;
-        --accent: #f59e0b;
-        --accent-soft: rgba(245, 158, 11, 0.14);
-        --rule: rgba(255, 255, 255, 0.1);
-    }
-
-    :root.light {
         --bg: #fafaf9;
-        --bg-soft: #f4f4f5;
-        --text: #18181b;
-        --text-muted: #71717a;
-        --accent: #b45309;
-        --accent-soft: rgba(180, 83, 9, 0.1);
-        --rule: rgba(0, 0, 0, 0.1);
+        --bg-elevated: #ffffff;
+        --bg-muted: #f2f2f0;
+        --text: #1c1917;
+        --text-muted: #78716c;
+        --accent: #0d9488;
+        --accent-dim: #ccfbf1;
+        --border: #e7e5e4;
+        --shadow:
+            0 1px 2px 0 rgb(0 0 0 / 0.04), 0 4px 12px -2px rgb(0 0 0 / 0.06);
     }
 
-    @media (prefers-color-scheme: light) {
-        :root:not(.dark) {
-            --bg: #fafaf9;
-            --bg-soft: #f4f4f5;
-            --text: #18181b;
-            --text-muted: #71717a;
-            --accent: #b45309;
-            --accent-soft: rgba(180, 83, 9, 0.1);
-            --rule: rgba(0, 0, 0, 0.1);
+    :root.dark {
+        --bg: #0c0a09;
+        --bg-elevated: #1c1917;
+        --bg-muted: #292524;
+        --text: #f5f5f4;
+        --text-muted: #a8a29e;
+        --accent: #2dd4bf;
+        --accent-dim: #115e59;
+        --border: #292524;
+        --shadow:
+            0 1px 2px 0 rgb(0 0 0 / 0.2), 0 4px 12px -2px rgb(0 0 0 / 0.3);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root:not(.light) {
+            --bg: #0c0a09;
+            --bg-elevated: #1c1917;
+            --bg-muted: #292524;
+            --text: #f5f5f4;
+            --text-muted: #a8a29e;
+            --accent: #2dd4bf;
+            --accent-dim: #115e59;
+            --border: #292524;
+            --shadow:
+                0 1px 2px 0 rgb(0 0 0 / 0.2), 0 4px 12px -2px rgb(0 0 0 / 0.3);
         }
     }
 
@@ -95,11 +96,10 @@
 
     body {
         margin: 0;
-        font-family: var(--font-serif);
-        font-size: 18px;
+        font-family: var(--font-sans);
         background: var(--bg);
         color: var(--text);
-        line-height: 1.6;
+        line-height: 1.65;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         transition:
@@ -108,27 +108,25 @@
     }
 
     .page {
-        max-width: 680px;
+        max-width: 720px;
         margin: 0 auto;
-        padding: 3rem 1.5rem 5rem;
+        padding: 2rem 1.5rem 4rem;
     }
 
     .site-header {
         display: flex;
-        align-items: baseline;
+        align-items: center;
         justify-content: space-between;
-        margin-bottom: 4rem;
-        padding-bottom: 1.25rem;
-        border-bottom: 1px solid var(--rule);
+        margin-bottom: 3rem;
     }
 
     .logo {
-        font-family: var(--font-serif);
-        font-size: 1.1rem;
-        font-weight: 500;
+        font-family: var(--font-mono);
+        font-size: 0.95rem;
+        font-weight: 600;
         color: var(--text);
         text-decoration: none;
-        letter-spacing: -0.02em;
+        letter-spacing: -0.01em;
     }
 
     .logo:hover {
@@ -137,89 +135,73 @@
 
     .theme-toggle {
         appearance: none;
-        border: 0;
-        background: transparent;
-        color: var(--text-muted);
-        font-family: var(--font-mono);
-        font-size: 1.1rem;
+        border: 1px solid var(--border);
+        background: var(--bg-elevated);
+        color: var(--text);
+        border-radius: 999px;
+        width: 2.25rem;
+        height: 2.25rem;
+        display: grid;
+        place-items: center;
         cursor: pointer;
-        padding: 0.25rem;
-        line-height: 1;
-        transition: color 0.2s ease;
+        box-shadow: var(--shadow);
+        transition:
+            transform 0.15s ease,
+            border-color 0.2s ease;
     }
 
     .theme-toggle:hover {
-        color: var(--accent);
+        transform: translateY(-1px);
+        border-color: var(--accent);
     }
 
-    .theme-toggle__sun,
-    .theme-toggle__moon {
-        display: block;
+    .theme-toggle:active {
+        transform: translateY(0);
     }
 
-    :root.dark .theme-toggle__sun,
-    :root:not(.light) .theme-toggle__sun {
-        display: none;
-    }
-
-    :root.light .theme-toggle__moon,
-    :root:not(.dark):not(.light) .theme-toggle__moon {
-        display: none;
-    }
-
-    @media (prefers-color-scheme: light) {
-        :root:not(.dark):not(.light) .theme-toggle__moon {
-            display: none;
-        }
-        :root:not(.dark):not(.light) .theme-toggle__sun {
-            display: block;
-        }
+    .theme-toggle__icon {
+        font-size: 1.1rem;
+        line-height: 1;
     }
 
     a {
-        color: var(--text);
+        color: var(--accent);
         text-decoration: none;
-        border-bottom: 1px solid var(--accent);
-        transition:
-            color 0.2s ease,
-            background 0.2s ease;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
     }
 
     a:hover {
-        color: var(--accent);
-        background: var(--accent-soft);
+        border-color: var(--accent);
     }
 
     h1,
     h2,
     h3 {
-        font-family: var(--font-serif);
-        font-weight: 500;
-        line-height: 1.1;
-        letter-spacing: -0.03em;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
     }
 
     ::selection {
-        background: var(--accent);
-        color: var(--bg);
+        background: var(--accent-dim);
+        color: var(--text);
     }
 
     .site-footer {
-        margin-top: 5rem;
-        padding-top: 1.25rem;
-        border-top: 1px solid var(--rule);
-        font-family: var(--font-mono);
-        font-size: 0.8rem;
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        font-size: 0.9rem;
         color: var(--text-muted);
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         gap: 0.75rem;
     }
 
     .site-footer a {
         color: var(--text-muted);
-        border-bottom-color: transparent;
     }
 
     .site-footer a:hover {
@@ -227,7 +209,7 @@
     }
 
     .separator {
-        color: var(--rule);
+        color: var(--border);
     }
 </style>
 
@@ -235,8 +217,10 @@
     (function () {
         const root = document.documentElement;
         const stored = localStorage.getItem("theme");
-        // Default to dark
-        const initial = stored || "dark";
+        const systemDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+        ).matches;
+        const initial = stored || (systemDark ? "dark" : "light");
 
         function apply(theme) {
             root.classList.remove("light", "dark");
