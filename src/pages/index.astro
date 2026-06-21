@@ -34,59 +34,38 @@ import Layout from "../layouts/Layout.astro";
                 <ul class="project-list">
                     <li>
                         <a href="https://github.com/keejkrej/nd2-rs">nd2-rs</a>
-                        <span class="project-desc"
-                            >— Nikon ND2 reader in Rust</span
-                        >
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/czi-rs">czi-rs</a>
-                        <span class="project-desc">— Zeiss CZI decoder</span>
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/bioformats-zig"
                             >bioformats-zig</a
                         >
-                        <span class="project-desc"
-                            >— Bioformats experiments in Zig</span
-                        >
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/mdat">mdat</a>
-                        <span class="project-desc">— Metadata helpers</span>
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/mtools">mtools</a>
-                        <span class="project-desc"
-                            >— Misc microscopy utilities</span
-                        >
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/mplot-rs"
                             >mplot-rs</a
                         >
-                        <span class="project-desc">— Plotting for science</span>
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/mlab-rs">mlab-rs</a
-                        >
-                        <span class="project-desc"
-                            >— Lab-notebook inspired toolkit</span
                         >
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/nd2-viewer"
                             >nd2-viewer</a
                         >
-                        <span class="project-desc"
-                            >— Browser-based ND2 viewer</span
-                        >
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/excalidraw-cli"
                             >excalidraw-cli</a
-                        >
-                        <span class="project-desc"
-                            >— CLI for Excalidraw diagrams</span
                         >
                     </li>
                 </ul>
@@ -98,29 +77,18 @@ import Layout from "../layouts/Layout.astro";
                     <li>
                         <a href="https://github.com/keejkrej/reflect">reflect</a
                         >
-                        <span class="project-desc"
-                            >— Self-reflection experiments</span
-                        >
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/agent-plot"
                             >agent-plot</a
                         >
-                        <span class="project-desc">— Agent-driven plotting</span
-                        >
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/100PUA">100PUA</a>
-                        <span class="project-desc"
-                            >— Prompt utility archive</span
-                        >
                     </li>
                     <li>
                         <a href="https://github.com/keejkrej/implAgent4Me"
                             >implAgent4Me</a
-                        >
-                        <span class="project-desc"
-                            >— Personal agent implementation</span
                         >
                     </li>
                 </ul>
@@ -214,23 +182,16 @@ import Layout from "../layouts/Layout.astro";
         padding: 0;
         margin: 0;
         display: grid;
-        gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.35rem 1rem;
     }
 
     .project-list li {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        gap: 0.35rem;
+        display: block;
     }
 
     .project-list a {
         font-family: var(--font-mono);
-        font-size: 0.95rem;
-    }
-
-    .project-desc {
-        color: var(--text-muted);
         font-size: 0.95rem;
     }
 </style>
