@@ -56,20 +56,24 @@
         /* Dark by default */
         --bg: #09090b;
         --bg-soft: #18181b;
+        --card-bg: #111113;
         --text: #f4f4f5;
         --text-muted: #a1a1aa;
         --accent: #f59e0b;
         --accent-soft: rgba(245, 158, 11, 0.14);
+        --border: rgba(255, 255, 255, 0.08);
         --rule: rgba(255, 255, 255, 0.1);
     }
 
     :root.light {
         --bg: #fafaf9;
         --bg-soft: #f4f4f5;
+        --card-bg: #ffffff;
         --text: #18181b;
         --text-muted: #71717a;
         --accent: #b45309;
         --accent-soft: rgba(180, 83, 9, 0.1);
+        --border: rgba(0, 0, 0, 0.08);
         --rule: rgba(0, 0, 0, 0.1);
     }
 
@@ -77,10 +81,12 @@
         :root:not(.dark) {
             --bg: #fafaf9;
             --bg-soft: #f4f4f5;
+            --card-bg: #ffffff;
             --text: #18181b;
             --text-muted: #71717a;
             --accent: #b45309;
             --accent-soft: rgba(180, 83, 9, 0.1);
+            --border: rgba(0, 0, 0, 0.08);
             --rule: rgba(0, 0, 0, 0.1);
         }
     }
