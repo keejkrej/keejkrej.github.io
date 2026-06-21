@@ -96,66 +96,78 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section class="section">
-            <h2>Who I Like</h2>
-            <p>No bullshit.</p>
-            <p>Criticize me but grounded.</p>
-            <p>Open source minded.</p>
+            <h2>What I Like</h2>
+            <ul>
+                <li>Tech & Science</li>
+                <li>Anime & Gacha games</li>
+                <li>Call of duty</li>
+                <li>Oasis & Pearl Jam & Pantera & Rage Against The Machine</li>
+            </ul>
+
+            <section class="section">
+                <h2>Who I Like</h2>
+                <ul>
+                    <li>No bullshit.</li>
+                    <li>Criticize me but grounded.</li>
+                    <li>Open source minded.</li>
+                </ul>
+            </section>
         </section>
     </main>
+
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            margin: 0 0 0.75rem;
+            color: var(--accent);
+        }
+
+        .section p {
+            margin: 0 0 0.75rem;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section p {
+            margin: 0 0 0.75rem;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-group {
+            margin-top: 1.25rem;
+            padding: 1.25rem;
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+        }
+
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 0.35rem 1rem;
+        }
+
+        .project-list li {
+            display: block;
+            margin: 0;
+        }
+
+        .project-list a {
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+        }
+    </style>
 </Layout>
-
-<style>
-    main {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-    }
-
-    .section h2 {
-        font-size: 1.25rem;
-        margin: 0 0 0.75rem;
-        color: var(--accent);
-    }
-
-    .section p {
-        margin: 0 0 0.75rem;
-    }
-
-    .section p:last-child {
-        margin-bottom: 0;
-    }
-
-    .section p {
-        margin: 0 0 0.75rem;
-    }
-
-    .section p:last-child {
-        margin-bottom: 0;
-    }
-
-    .project-group {
-        margin-top: 1.25rem;
-        padding: 1.25rem;
-        border: 1px solid var(--border);
-        border-radius: 0.75rem;
-    }
-
-    .project-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 0.35rem 1rem;
-    }
-
-    .project-list li {
-        display: block;
-        margin: 0;
-    }
-
-    .project-list a {
-        font-family: var(--font-mono);
-        font-size: 0.95rem;
-    }
-</style>
