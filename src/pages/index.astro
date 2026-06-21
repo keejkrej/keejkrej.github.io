@@ -124,34 +124,20 @@ import Layout from "../layouts/Layout.astro";
         margin-bottom: 0;
     }
 
+    .section p {
+        margin: 0 0 0.75rem;
+    }
+
+    .section p:last-child {
+        margin-bottom: 0;
+    }
+
     .project-group {
         margin-top: 1.25rem;
         padding: 1.25rem;
         background: var(--card-bg);
         border: 1px solid var(--border);
-        border-left: 3px solid var(--accent);
         border-radius: 0.75rem;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-        transition:
-            transform 0.15s ease,
-            box-shadow 0.15s ease,
-            border-color 0.2s ease;
-    }
-
-    .project-group:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        border-color: var(--accent);
-    }
-
-    .project-group p {
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--text-muted);
-        margin: 0 0 0.75rem;
     }
 
     .project-list {
@@ -171,10 +157,5 @@ import Layout from "../layouts/Layout.astro";
     .project-list a {
         font-family: var(--font-mono);
         font-size: 0.95rem;
-        border-bottom-color: transparent;
-    }
-
-    .project-list a:hover {
-        border-bottom-color: var(--accent);
     }
 </style>
